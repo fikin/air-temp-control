@@ -47,6 +47,26 @@ Following modules are required:
 
 Both, integer and float builds should be working fine with this code.
 
+## Installation
+
+Flash firmware to NodeMCU.
+
+Copy lua files to NodeMCU.
+
+Restart NodeMCU.
+
+## Usage
+
+- After boot up, display would display: "> 20C".
+- Choose target temperature using rotary switch.
+- Start control loop by pressing rotary switch.
+- Display would visualize :
+  - Current temperature and humidity with large font.
+  - With smaller font display would visualize:
+    - Observed so far "Min" and "Max" temperature.
+    - Set target (Tgt).
+    - If the heating element is on it would indicate it as ".ON".
+
 ## License
 
 GPLv3, see LICENSE file
