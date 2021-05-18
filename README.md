@@ -1,4 +1,4 @@
-# Simple Air Temperature Control
+# Simple Cabinet Air Temperature Control
 
 This project is about a very simple temperature control setup involving DHT22 sensor, relay and user interface in form of OLED and rotary switch.
 
