@@ -5,7 +5,7 @@ Authors : Nikolay Fiykov, v1
 --]]
 local function startTempControl(pinouts, disp, targetTemp)
   local maxTemp = 0
-  local minTemp = 0
+  local minTemp = 100
   local function check(timer)
     disp:clearBuffer()
     disp:setFont(u8g2.font_helvB24_tf)
@@ -22,7 +22,7 @@ local function startTempControl(pinouts, disp, targetTemp)
       disp:drawStr(80, 35, string.format("Min %d", minTemp))
       if math.floor(temp) < targetTemp then
         gpio.write(pinouts.relayS, gpio.HIGH)
-        disp:drawStr(80, 60, "...")
+        disp:drawStr(80, 60, ".ON")
       else
         gpio.write(pinouts.relayS, gpio.LOW)
       end
